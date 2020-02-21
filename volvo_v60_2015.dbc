@@ -1,0 +1,94 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_:
+
+BU_: XXX
+
+
+BO_ 16 NEW_MSG_1: 8 XXX
+ SG_ Counter0 : 3|8@0+ (1,0) [0|511] "" XXX
+ SG_ SteeringWheelAngle : 53|14@0+ (1,0) [0|65535] "" XXX
+ SG_ RateOfChangeOrTorque : 39|16@0+ (1,-32768) [0|65535] "" XXX
+ SG_ SteeringDirection : 6|1@0+ (1,0) [0|1] "" XXX
+ SG_ NEW_SIGNAL_1 : 22|15@0+ (1,0) [0|65535] "" XXX
+
+BO_ 32 NEW_MSG_2: 8 XXX
+ SG_ AcceleratorPedal : 17|10@0+ (0.1,0) [0|1023] "" XXX
+
+BO_ 648 NEW_MSG_3: 8 XXX
+ SG_ Counter : 0|3@1+ (1,0) [0|7] "" XXX
+ SG_ Brake : 24|8@1+ (1,4) [0|255] "" XXX
+
+BO_ 465 NEW_MSG_4: 8 XXX
+ SG_ ZeroWhileBraking : 3|1@0+ (1,0) [0|1] "" XXX
+
+BO_ 298 NEW_MSG_5: 8 XXX
+ SG_ ZeroWhileBraking : 38|1@0+ (1,0) [0|1] "" XXX
+
+BO_ 609 SteeringServo: 8 XXX
+ SG_ SteeringAngle : 21|14@0+ (1,0) [0|65535] "" XXX
+
+BO_ 582 NEW_MSG_6: 8 XXX
+ SG_ SteeringWheelAngle : 23|16@0+ (1,0) [0|65535] "" XXX
+ SG_ SteeringWheelRateOfChange : 0|9@0+ (1,0) [0|255] "" XXX
+
+BO_ 81 fromFSM0: 8 XXX
+
+BO_ 608 fromFSM1: 8 XXX
+
+BO_ 610 fromFSM2: 8 XXX
+ SG_ Unkown : 23|8@0+ (1,0) [0|255] "" XXX
+ SG_ Checksum : 55|8@0+ (1,0) [0|255] "" XXX
+ SG_ LKADirection : 41|2@0+ (1,0) [0|3] "" XXX
+ SG_ LKAAngleRequest : 29|14@0+ (0.04,-327.68) [0|16383] "" XXX
+
+BO_ 624 fromFSM3: 8 XXX
+
+BO_ 794 fromFSM4: 8 XXX
+
+BO_ 821 fromFSM5: 8 XXX
+
+BO_ 1021 fromFSM6: 8 XXX
+
+
+
+
+CM_ SG_ 16 RateOfChangeOrTorque "Rate of change? Torque?";
+CM_ SG_ 16 SteeringDirection "0 = CCW, 1=CW (turning left or right of center)";
+CM_ SG_ 32 AcceleratorPedal "Unsure about scaling.";
+CM_ SG_ 648 Brake "Something with brake pedal, presure, position.";
+CM_ SG_ 465 ZeroWhileBraking "Turns zero while braking";
+CM_ SG_ 298 ZeroWhileBraking "Turns zero while braking";
+CM_ SG_ 582 SteeringWheelRateOfChange "Some rate of change for steering wheel?";
+CM_ SG_ 610 LKADirection "0=None, 1=Right, 2=Left";
